@@ -1,5 +1,5 @@
 # Riiid! Answer Correctness Prediction
-###149th solution (Top 5%, AUC 0.793) of [Riiid! Answer Correctness Prediction](https://www.kaggle.com/c/riiid-test-answer-prediction)
+## 149th solution (Top 5%, AUC 0.793) of [Riiid! Answer Correctness Prediction](https://www.kaggle.com/c/riiid-test-answer-prediction)
 
 From October 12th, 2020 to January 7th, 2021, AIEd company Riiid! hosted a Kaggle competition that asked participants to create algorithms for "Knowledge Tracing," the modeling of student knowledge over time. The goal is to accurately predict how students will perform on future interactions, based on a [EdNet dataset](https://github.com/riiid/ednet) provided by Riiid. 
 
