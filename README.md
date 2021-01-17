@@ -68,7 +68,7 @@ Added below layers with positional encoding.
 * **tag1...6**: tags of question (t1 to t6 are the tag of one question, t1 being the most important tag.)
 Above embeddings or Dense layer concatenated.
 
-### 2) content id (cid)
+### 2) Content id (cid)
 Dense layer
 
 ## Decoder
