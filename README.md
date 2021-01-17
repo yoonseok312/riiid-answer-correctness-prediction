@@ -98,7 +98,7 @@ Above embeddings or Dense layer concatenated.
 
 ### Single Model AUC
 AUC 0.786  
-SAINT model has plenty of room for improvement, but as 1 epoch took around 18 hours to train we decided to focus on improving LGBM.
+SAINT model has plenty of room for improvement, but as 1 epoch took more than 10 hours to train we decided to focus on improving LGBM.
 
 # Inference
 ### 1. Ensembling two models
@@ -112,5 +112,12 @@ When 2 models out of three models predicted that the user is likely to answer wr
 For remaining cases, we mixed three models in 0.4 (Transformer) / 0.45 (First LGBM) / 0.15 (Second LGBM) ratio.  
 AUC: 0.793 (slightly higher than the 1st Inference)
 
-## Possible Improvements
-1. Larger tail size
+# Training Environment
+Our biggest mistake was thinking that all the feature engineering, training, and inferencing process must be done in the Kaggle environment. We were only using Kaggle environment until 2 weeks before the competiton ended, and from then we started to use Google Colab with GPU and 25GB of RAM. Still, there were several times when Colab took GPU from us and didn't give it for several hours as we were constanly using their GPU.
+
+# Possible Improvements
+1. Larger window size for the transformer.
+We could check that teams with larger window size for transformer generally got higher score. However, we couldn't test this due to lack of time.
+2. Add more key features to LGBM. 
+After the competition ended some of the key features that increased AUC a lot were released, and I would like to give them a try. 
+
