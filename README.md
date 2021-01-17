@@ -116,8 +116,8 @@ AUC: 0.793 (slightly higher than the 1st Inference)
 Our biggest mistake was thinking that all the feature engineering, training, and inferencing process must be done in the Kaggle environment. We were only using Kaggle environment until 2 weeks before the competiton ended, and from then we started to use Google Colab with GPU and 25GB of RAM. Still, there were several times when Colab took GPU from us and didn't give it for several hours as we were constanly using their GPU.
 
 # Possible Improvements
-1. Larger window size for the transformer.
+1. Larger window size for the transformer.  
 We could check that teams with larger window size for transformer generally got higher score. However, we couldn't test this due to lack of time.
-2. Add more key features to LGBM. 
+2. Add more key features to LGBM.  
 After the competition ended some of the key features that increased AUC a lot were released, and I would like to give them a try. 
 
