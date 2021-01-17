@@ -50,7 +50,7 @@ First image is the feature importance plot without specifying the ```importance_
 5. Train the model with remaining 50% of the data. 
 
 ### Single Model AUC
-We used less than 30 features, but considering that most of the single LGBM models above 0.79 AUC used 40+ features, we did a decent work on focusing on imoportant features.
+We used less than 30 features, but considering that most of the single LGBM models above 0.79 AUC used 40+ features, we did a decent work on focusing on imoportant features.  
 LB score: AUC 0.789
 
 ## Transformer
@@ -78,14 +78,14 @@ LB score: AUC 0.786
 
 ## Inference
 ### 1. Ensembling two models
-Ensembled a single LGBM model and a Transformer model in 0.55 (LGBM) / 0.45 ratio. 
+Ensembled a single LGBM model and a Transformer model in 0.55 (LGBM) / 0.45 ratio.  
 AUC: 0.793
 
 ### 2. Ensembling three models
 Ensembled two LGBM and a Transformer model. 2nd LGBM was same as the first LGBM but except features related to Trueskill.
 When 2 models out of three models predicted that the user is likely to answer correctly, we used the max value among the 3 predictions.
 When 2 models out of three models predicted that the user is likely to answer wronly, we used the min value among the 3 predictions.
-For remaining cases, we mixed three models in 0.4 (Transformer) / 0.45 (First LGBM) / 0.15 (Second LGBM) ratio. 
+For remaining cases, we mixed three models in 0.4 (Transformer) / 0.45 (First LGBM) / 0.15 (Second LGBM) ratio.  
 AUC: 0.793 (slightly higher than the 1st Inference)
 
 ## Possible Improvements
