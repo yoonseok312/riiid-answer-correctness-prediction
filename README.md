@@ -49,6 +49,11 @@ First image is the feature importance plot without specifying the ```importance_
 4. Take last 25% of data as validation set. 
 5. Train the model with remaining 50% of the data. 
 
+### Single Model AUC
+We used less than 30 features, but considering that most of the single LGBM models above 0.79 AUC used 40+ features, we did a decent work on focusing on imoportant features.
+CV score: 
+LB score:
+
 ## Transformer
 ### Features
 * min_delta: minute difference from between this question and the previous. Cap at 1443 (1 day)
