@@ -38,7 +38,8 @@ For 2 months, I participated in the competition as a team leader with Harheem Ki
 Columns with NaN value was filled with -1. 
 
 ### Feature importance
-
+![image](https://user-images.githubusercontent.com/57027695/104830230-286b0700-58c0-11eb-9244-f254664cc009.png)
+![image](https://user-images.githubusercontent.com/57027695/104830236-4173b800-58c0-11eb-9e75-1f8b54d065cc.png)
 
 ### Cross Validation and train strategy
 1. Define an absolute time for the whole database (abs_time = user_id//50 + timestamp//1000)
