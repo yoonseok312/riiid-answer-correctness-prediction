@@ -89,4 +89,4 @@ For remaining cases, we mixed three models in 0.4 (Transformer) / 0.45 (First LG
 AUC: 0.793 (slightly higher than the 1st Inference)
 
 ## Possible Improvements
-TBD
+1. Larger tail size
