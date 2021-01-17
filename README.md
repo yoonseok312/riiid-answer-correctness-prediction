@@ -37,6 +37,9 @@ For 2 months, I participated in the competition as a team leader with Harheem Ki
 
 Columns with NaN value was filled with -1. 
 
+### Feature importance
+
+
 ### Cross Validation and train strategy
 1. Define an absolute time for the whole database (abs_time = user_id//50 + timestamp//1000)
 2. Sort by abs_time. All features mentioned above were engineered such that we will not take data from the future (higher abs_time) into account.
