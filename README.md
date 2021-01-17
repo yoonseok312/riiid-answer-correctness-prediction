@@ -74,7 +74,7 @@ LB score: AUC 0.789
 1. Use first 80% of data as train set and last 20% as validation set. 
 
 ### Single Model AUC
-LB score: AUC 0.786
+AUC 0.786
 
 ## Inference
 ### 1. Ensembling two models
