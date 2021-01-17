@@ -7,37 +7,38 @@ For 2 months, I participated in the competition as a team leader with Harheem Ki
 
 ## LightGBM
 ### Features
-* ts_delta: the gap between timestamp of current content with previous content of the same user.
-* task_container_id
-* prior_question_elapsed_time: in second, rounded
-* prior_question_had_explanation
-* part
-* num_tag: number of tags in that question
-* u_chance: the average correctness of the user until current time
-* u_attempts: number of content the user have done
-* u_attempt_c: number of times the user interacted with the specific content in the past (only counting from >1 interactions due to memory)
-* c_chance: the average correctness of the question until current time
-* c_attempts:  number of encounter of that question (all user)
-* u_part_chance: the average correctness of the user doing the same part as the question
-* u_part_attempts: number of question of the same part the user have done
-* u_skill_chance: the average correctness of the user doing the same skill as the question (part < 5: listening, part >= 5: reading)
-* u_skill_attempts: number of question of the same skill the user have done
-* t_chance: the average correctness of the user of questions with specific tag until current time
-* t_attempts: user's number of encounter of that tag
-* total_explained: number of times explanation was provided to the user until current time (all contents)
-* 10_recent_correctness: user correctness of the most recent questions (up to 10)
-* 10_recent_mean_gap: mean ts_delta of the most recent questions (up to 10)
-* bundle_elapsed: the mean elapsed time of the bundle, up until the abs time.
-* mean_elapsed: the mean elapsed time of the user until now. 
-* prev_t1: tag of the last question
-* prev_cor: correctness of the last question
-* trueskill_possibility: possibility of the user 'beating' the question (getting the question correct) based on [trueskill](https://trueskill.org/)
-* mu: mu value (mean of trueskill ratings) of user
-* sigma: sigma value (standard deviation of trueskill ratings) of user 
+* **ts_delta**: the gap between timestamp of current content with previous content of the same user.
+* **task_container_id**
+* **prior_question_elapsed_time**: in second, rounded
+* **prior_question_had_explanation**
+* **part**
+* **num_tag**: number of tags in that question
+* **u_chance**: the average correctness of the user until current time
+* **u_attempts**: number of content the user have done
+* **u_attempt_c**: number of times the user interacted with the specific content in the past (only counting from >1 interactions due to memory)
+* **c_chance**: the average correctness of the question until current time
+* **c_attempts**:  number of encounter of that question (all user)
+* **u_part_chance**: the average correctness of the user doing the same part as the question
+* **u_part_attempts**: number of question of the same part the user have done
+* **u_skill_chance**: the average correctness of the user doing the same skill as the question (part < 5: listening, part >= 5: reading)
+* **u_skill_attempts**: number of question of the same skill the user have done
+* **t_chance**: the average correctness of the user of questions with specific tag until current time
+* **t_attempts**: user's number of encounter of that tag
+* **total_explained**: number of times explanation was provided to the user until current time (all contents)
+* **10_recent_correctness**: user correctness of the most recent questions (up to 10)
+* **10_recent_mean_gap**: mean ts_delta of the most recent questions (up to 10)
+* **bundle_elapsed**: the mean elapsed time of the bundle, up until the abs time.
+* **mean_elapsed**: the mean elapsed time of the user until now. 
+* **prev_t1**: tag of the last question
+* **prev_cor**: correctness of the last question
+* **trueskill_possibility**: possibility of the user 'beating' the question (getting the question correct) based on [trueskill](https://trueskill.org/)
+* **mu**: mu value (mean of trueskill ratings) of user
+* **sigma**: sigma value (standard deviation of trueskill ratings) of user 
 
 Columns with NaN value was filled with -1. 
 
 ### Feature importance
+First image is the feature importance plot without specifying the ```importance_type```. There are some major differences shown in these plots.  
 ![image](https://user-images.githubusercontent.com/57027695/104830230-286b0700-58c0-11eb-9244-f254664cc009.png)
 ![image](https://user-images.githubusercontent.com/57027695/104830236-4173b800-58c0-11eb-9e75-1f8b54d065cc.png)
 
