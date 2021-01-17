@@ -54,21 +54,39 @@ We used less than 30 features, but considering that most of the single LGBM mode
 LB score: AUC 0.789
 
 ## Transformer
-### Features
-* min_delta: minute difference from between this question and the previous. Cap at 1443 (1 day)
-* day_delta: day difference from between this question and the previous. Cap at 30
-* month_delta: month difference from between this question and the previous. Cap at 9
-* cid: content id/question id
-* tid: task container id
-* prior_elapsed
-* prior_explained
-* is_with: if the question is presented with another question. Usually have the same task container
-* num_lect: number of lecture the user have seen
-* lec_type: 1 hot encode of most recent lecture type, (llecty1, 2...)
-* lec_h_past: time since most recent lecture
-* c_part: part, one hot encode and denote skill (listening, reading, part1,2,...)
-* tag1...6: tags of question (t1 to t6 are the tag of one question, t1 being the most important tag.)
-* prev_answered_correct: correctness of previous answer.
+### Encoder
+Added below layers with positional encoding. 
+
+### 1) Excercise Related
+* **min_delta**: minute difference from between this question and the previous. Cap at 1443 (1 day)
+* **day_delta**: day difference from between this question and the previous. Cap at 30
+* **month_delta**: month difference from between this question and the previous. Cap at 9
+* **tid**: task container id
+* **is_with**: if the question is presented with another question. Usually have the same task container
+* **c_part**: part, one hot encode and denote skill (listening, reading, part1,2,...)
+* **tag1...6**: tags of question (t1 to t6 are the tag of one question, t1 being the most important tag.)
+Above embeddings or Dense layer concatenated.
+
+### 2) content id (cid)
+Dense layer
+
+### Decoder
+Added below layers with positional encoding.
+
+### 1) Response Related
+* **prev_answered_correct**: correctness of previous answer.
+* **prior_elapsed**: prior elapsed tiem
+* **prior_explained**: prior has explanation
+Above embeddings or Dense layer concatenated.
+
+### 2) Answered Correctly
+
+### Concatenate Lecture related Embeddings/Dense
+* **num_lect**: number of lecture the user have seen
+* **lec_type**: 1 hot encode of most recent lecture type, (llecty1, 2...)
+* **lec_h_past**: time since most recent lecture
+Above embeddings or Dense layer concatenated.
+
 
 ### Cross Validation and train strategy
 1. Use first 80% of data as train set and last 20% as validation set. 
