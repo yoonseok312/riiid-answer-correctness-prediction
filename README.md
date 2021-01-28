@@ -51,7 +51,7 @@ First image is the feature importance plot without specifying the ```importance_
 
 ### Single Model AUC
 We used less than 30 features, but considering that most of the single LGBM models above 0.79 AUC used 40+ features, we did a decent work on focusing on imoportant features.  
-LB score: AUC 0.789  
+LB score: AUC 0.790  
 Number of epochs: 6650 (around 15 hours of training in total)
 
 # Transformer
@@ -97,7 +97,7 @@ Above embeddings or Dense layer concatenated.
 1. Use first 80% of data as train set and last 20% as validation set. 
 
 ### Single Model AUC
-AUC 0.786  
+AUC 0.787  
 SAINT model has plenty of room for improvement, but as 1 epoch took more than 10 hours to train we decided to focus on improving LGBM.
 
 # Inference
